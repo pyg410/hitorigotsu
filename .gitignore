@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+*.mp4
+*.mkv
+*.webm
+*.wav
+*.part
+*.cast
+.DS_Store
+.wheel-test/

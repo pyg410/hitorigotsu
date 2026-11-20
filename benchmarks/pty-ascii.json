@@ -1,0 +1,16 @@
+{
+  "elapsed_s": 6.001102249836549,
+  "startup_s": 0.025086707901209593,
+  "frames": 144,
+  "actual_fps": 23.995591810474835,
+  "processing_mean_ms": 3.43216982178597,
+  "rendering_mean_ms": 14.624855649243626,
+  "dropped_frames": 0,
+  "av_drift_mean_ms": null,
+  "video_clock_error_max_ms": 42.779208781818554,
+  "cpu_percent": 8.936228373955906,
+  "peak_sampled_rss_mib": 45.578125,
+  "audio_underruns": 0,
+  "headless": false,
+  "note": "CPU/RSS: Python process only. Drift: frame PTS vs DAC clock, not acoustic latency."
+}

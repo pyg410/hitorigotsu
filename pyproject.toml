@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hitorigotsu-cli"
+version = "0.1.0"
+description = "TrueColor terminal video player with audio-clock synchronization and YouTube caching"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{name = "Hitorigotsu CLI contributors"}]
+dependencies = ["numpy>=2.0", "opencv-python-headless>=4.10", "sounddevice>=0.5", "yt-dlp[default]>=2025.11.12", "platformdirs>=4.3", "psutil>=6.1"]
+
+[project.scripts]
+hitorigotsu = "hitorigotsu.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.3", "ruff>=0.9", "pillow>=11", "pyte>=0.8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hitorigotsu"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: requires FFmpeg", "network: opt-in real YouTube download"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
